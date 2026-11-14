@@ -10,9 +10,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+/// <reference types="vitest" />
+import { defineConfig } from 'vitest/config'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
   test: {
-    environment: 'node',
     globals: true,
-    include: ['src/**/*.{test,spec}.{ts,tsx}'],
-  },
+    environment: 'jsdom',
+    // ...
+  }
 })
