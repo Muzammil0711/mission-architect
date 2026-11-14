@@ -1,10 +1,7 @@
 // MISSION ARCHITECT — Scoring (0-1000) with transparent breakdown
-
-import type { ScoreBreakdown } from './engine/types'
-import type { RulesResult } from './engine/rules'
-import type { MissionDesign } from './engine/types'
-import type { SimResult } from './engine/simulation'
-
+./engine/types       → ./types
+./engine/rules       → ./rules
+./engine/simulation  → ./simulation
 export interface ScoreInputs {
   rules: RulesResult
   sim: SimResult
